@@ -82,8 +82,6 @@ if __name__ == "__main__":
     max_iter = 100
     tol = 1e-3
     model_path = "simple_dynamics_model.pth"
-    model_type = "simple"  # Choose between 'simple', 'l2', 'gradient_norm'
+    model_type = "simple" 
 
     u_opt, x_opt = trajectory_optimization(model_path, model_type, x0, N, epsilon, M, lr, max_iter, tol)
-    print("Optimized Control Inputs:\n", u_opt)
-    print("State Trajectory:\n", x_opt)
